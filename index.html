@@ -1,413 +1,380 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prompt GPT - AI Prompts</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay">
-      <div class="spinner"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt GPT - AI Prompts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Loading Overlay -->
+  <div class="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <h1 class="site-title">Prompt GPT</h1>
+      <nav>
+        <ul>
+          <li><a href="#definitions">Definitions</a></li>
+          <li><a href="#study">Study</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#math">Math</a></li>
+          <li><a href="#rewriting">Rewriting</a></li>
+          <li><a href="#research">Research</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" aria-hidden="true"></div>
+  <!-- Main Content -->
+  <main class="container">
+    <section id="definitions">
+      <h2>Understanding Key Concepts</h2>
+      <div class="prompt-grid">
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Clear Definitions</span>
+            <button class="copy-btn"
+              data-prompt="Please define the following terms in a way that is clear and concise, and then provide a relevant example to illustrate each concept."
+              aria-label="Copy prompt for Clear Definitions">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Please define the following terms in a way that is clear and
+            concise, and then provide a relevant example to illustrate each
+            concept.
+          </p>
+        </div>
 
-    <!-- Header -->
-    <header>
-      <div class="header-content">
-        <h1 class="site-title">Prompt GPT</h1>
-        <nav>
-          <ul>
-            <li><a href="#definitions">Definitions</a></li>
-            <li><a href="#study">Study</a></li>
-            <li><a href="#writing">Writing</a></li>
-            <li><a href="#math">Math</a></li>
-            <li><a href="#rewriting">Rewriting</a></li>
-            <li><a href="#research">Research</a></li>
-          </ul>
-        </nav>
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Exam Preparation</span>
+            <button class="copy-btn"
+              data-prompt="Can you generate a comprehensive summary of the key concepts and major themes covered in this lecture, highlighting the most important takeaways for my upcoming exam?"
+              aria-label="Copy prompt for Exam Preparation">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Can you generate a comprehensive summary of the key concepts and
+            major themes covered in this lecture, highlighting the most
+            important takeaways for my upcoming exam?
+          </p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Cause and Effect Analysis</span>
+            <button class="copy-btn"
+              data-prompt="I'm struggling to understand the {insert topic} could you explain the cause-and-effect chain in detail, using a chronological and easy-to-follow narrative?"
+              aria-label="Copy prompt for Cause and Effect Analysis">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            I'm struggling to understand the {insert topic} could you explain
+            the cause-and-effect chain in detail, using a chronological and
+            easy-to-follow narrative?
+          </p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Simplified Explanations</span>
+            <button class="copy-btn"
+              data-prompt="Can you simplify the explanation of this {Insert topic}, breaking it down into a series of steps and using an analogy that makes the concept more relatable and easier to remember?"
+              aria-label="Copy prompt for Simplified Explanations">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Can you simplify the explanation of this {Insert topic}, breaking
+            it down into a series of steps and using an analogy that makes the
+            concept more relatable and easier to remember?
+          </p>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <!-- Main Content -->
-    <main class="container">
-      <section id="definitions">
-        <h2>Understanding Key Concepts</h2>
-        <div class="prompt-grid">
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Clear Definitions</span>
-              <button
-                class="copy-btn"
-                data-prompt="Please define the following terms in a way that is clear and concise, and then provide a relevant example to illustrate each concept."
-                aria-label="Copy prompt for Clear Definitions"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Please define the following terms in a way that is clear and
-              concise, and then provide a relevant example to illustrate each
-              concept.
-            </p>
+    <section id="study">
+      <h2>Practice & Review</h2>
+      <div class="prompt-grid">
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Practice Questions</span>
+            <button class="copy-btn"
+              data-prompt="Please create a set of practice questions for this chapter, ranging from multiple-choice to short-answer, that will test my understanding of the material."
+              aria-label="Copy prompt for Practice Questions">
+              Copy
+            </button>
           </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Exam Preparation</span>
-              <button
-                class="copy-btn"
-                data-prompt="Can you generate a comprehensive summary of the key concepts and major themes covered in this lecture, highlighting the most important takeaways for my upcoming exam?"
-                aria-label="Copy prompt for Exam Preparation"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Can you generate a comprehensive summary of the key concepts and
-              major themes covered in this lecture, highlighting the most
-              important takeaways for my upcoming exam?
-            </p>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Cause and Effect Analysis</span>
-              <button
-                class="copy-btn"
-                data-prompt="I'm struggling to understand the {insert topic} could you explain the cause-and-effect chain in detail, using a chronological and easy-to-follow narrative?"
-                aria-label="Copy prompt for Cause and Effect Analysis"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              I'm struggling to understand the {insert topic} could you explain
-              the cause-and-effect chain in detail, using a chronological and
-              easy-to-follow narrative?
-            </p>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Simplified Explanations</span>
-              <button
-                class="copy-btn"
-                data-prompt="Can you simplify the explanation of this {Insert topic}, breaking it down into a series of steps and using an analogy that makes the concept more relatable and easier to remember?"
-                aria-label="Copy prompt for Simplified Explanations"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Can you simplify the explanation of this {Insert topic}, breaking
-              it down into a series of steps and using an analogy that makes the
-              concept more relatable and easier to remember?
-            </p>
-          </div>
+          <p class="prompt-text">
+            Please create a set of practice questions for this chapter,
+            ranging from multiple-choice to short-answer, that will test my
+            understanding of the material.
+          </p>
         </div>
-      </section>
 
-      <section id="study">
-        <h2>Practice & Review</h2>
-        <div class="prompt-grid">
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Practice Questions</span>
-              <button
-                class="copy-btn"
-                data-prompt="Please create a set of practice questions for this chapter, ranging from multiple-choice to short-answer, that will test my understanding of the material."
-                aria-label="Copy prompt for Practice Questions"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Please create a set of practice questions for this chapter,
-              ranging from multiple-choice to short-answer, that will test my
-              understanding of the material.
-            </p>
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Flashcard Creation</span>
+            <button class="copy-btn"
+              data-prompt="Could you create a 20 Q and A for me based on the vocabulary and key terms from this unit, with the term on one side and a clear, succinct definition on the other?"
+              aria-label="Copy prompt for Flashcard Creation">
+              Copy
+            </button>
           </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Flashcard Creation</span>
-              <button
-                class="copy-btn"
-                data-prompt="Could you create a 20 Q and A for me based on the vocabulary and key terms from this unit, with the term on one side and a clear, succinct definition on the other?"
-                aria-label="Copy prompt for Flashcard Creation"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Could you create a 20 Q and A for me based on the vocabulary and
-              key terms from this unit, with the term on one side and a clear,
-              succinct definition on the other?
-            </p>
-          </div>
+          <p class="prompt-text">
+            Could you create a 20 Q and A for me based on the vocabulary and
+            key terms from this unit, with the term on one side and a clear,
+            succinct definition on the other?
+          </p>
         </div>
-      </section>
-
-      <section id="writing">
-        <h2>Essay Writing & Academic Skills</h2>
-        <div class="prompt-grid">
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Essay Planning</span>
-              <button
-                class="copy-btn"
-                data-prompt="I need to write an essay on this topic; could you help me brainstorm a strong thesis statement and outline the main arguments, providing supporting evidence from the provided text?"
-                aria-label="Copy prompt for Essay Planning"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              I need to write an essay on this topic; could you help me
-              brainstorm a strong thesis statement and outline the main
-              arguments, providing supporting evidence from the provided text?
-            </p>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Complete Essay Outline</span>
-              <button
-                class="copy-btn"
-                data-prompt="Create a complete essay outline on {TOPIC}. Include an engaging hook, strong thesis statement and a conclusion with a call to action."
-                aria-label="Copy prompt for Complete Essay Outline"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Create a complete essay outline on {TOPIC}. Include an engaging
-              hook, strong thesis statement and a conclusion with a call to
-              action.
-            </p>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Essay Enhancement</span>
-              <button
-                class="copy-btn"
-                data-prompt="Rewrite this draft essay to make it more persuasive and academic-sounding without changing the meaning: {ESSAY}"
-                aria-label="Copy prompt for Essay Enhancement"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Rewrite this draft essay to make it more persuasive and
-              academic-sounding without changing the meaning: {ESSAY}
-            </p>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Formal Academic Writing</span>
-              <button
-                class="copy-btn"
-                data-prompt="Write in a 300 words essay about {TOPIC} in a formal academic tone with transitions and citations {APA format}."
-                aria-label="Copy prompt for Formal Academic Writing"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Write in a 300 words essay about {TOPIC} in a formal academic tone
-              with transitions and citations {APA format}.
-            </p>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Proofreading</span>
-              <button
-                class="copy-btn"
-                data-prompt="Proofread and improve grammar, clarity and coherence of this essay without losing any of the original's intent? {ESSAY}"
-                aria-label="Copy prompt for Proofreading"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Proofread and improve grammar, clarity and coherence of this essay
-              without losing any of the original's intent? {ESSAY}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="math">
-        <h2>Problem Solving & Math Help</h2>
-        <div class="prompt-grid">
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Step-by-Step Solutions</span>
-              <button
-                class="copy-btn"
-                data-prompt="I'm having trouble with this math problem; can you walk me through the step-by-step solution, explaining the reasoning behind each calculation and the formula used?"
-                aria-label="Copy prompt for Step-by-Step Solutions"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              I'm having trouble with this math problem; can you walk me through
-              the step-by-step solution, explaining the reasoning behind each
-              calculation and the formula used?
-            </p>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Simplification</span>
-              <button
-                class="copy-btn"
-                data-prompt="Can you rephrase this complex sentence or paragraph in simpler terms, making it more accessible and easier for me to grasp its core meaning without losing any of the original's intent?"
-                aria-label="Copy prompt for Simplification"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Can you rephrase this complex sentence or paragraph in simpler
-              terms, making it more accessible and easier for me to grasp its
-              core meaning without losing any of the original's intent?
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="rewriting">
-        <h2>Content Transformation</h2>
-        <div class="prompt-grid">
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Note Summarization</span>
-              <button
-                class="copy-btn"
-                data-prompt="Write a concise summary of the lesson into clear and easily understandable notes. Your summary must capture the core information and key concepts. The final output should be a brief, informative outline that allows anyone to immediately grasp the essential facts."
-                aria-label="Copy prompt for Note Summarization"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Write a concise summary of the lesson into clear and easily
-              understandable notes. Your summary must capture the core
-              information and key concepts. The final output should be a brief,
-              informative outline that allows anyone to immediately grasp the
-              essential facts.
-            </p>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Human-Like Rewriting</span>
-              <button
-                class="copy-btn"
-                data-prompt="Rewrite the following text to match a specific human and natural tone. Use clear language. Use a conversational and slightly informal tone. Avoid predictable rhythmic patterns. Avoid robotic structure. Insert specific personal anecdotes or hypothetical examples to illustrate points. Use common idioms correctly. Avoid repetitive transition words. If a sentence sounds too perfect or formal, break it. Write as if you are explaining this to a friend over coffee. Readability should match a college student. Prioritize clarity over complex vocabulary. Remove any list that looks too structured. Integrate those points into narrative paragraphs instead. Ensure the text includes occasional subjective opinions or mild biases typical of a human writer."
-                aria-label="Copy prompt for Human-Like Rewriting"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Rewrite the following text to match a specific human and natural
-              tone. Use clear language. Use a conversational and slightly
-              informal tone. Avoid predictable rhythmic patterns. Avoid robotic
-              structure. Insert specific personal anecdotes or hypothetical
-              examples to illustrate points. Use common idioms correctly. Avoid
-              repetitive transition words. If a sentence sounds too perfect or
-              formal, break it. Write as if you are explaining this to a friend
-              over coffee. Readability should match a college student.
-              Prioritize clarity over complex vocabulary. Remove any list that
-              looks too structured. Integrate those points into narrative
-              paragraphs instead. Ensure the text includes occasional subjective
-              opinions or mild biases typical of a human writer.
-            </p>
-          </div>
-
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Concise Rewriting</span>
-              <button
-                class="copy-btn"
-                data-prompt="Can you rewrite this in 100 words, without losing any of the original's intent?"
-                aria-label="Copy prompt for Concise Rewriting"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              Can you rewrite this in 100 words, without losing any of the
-              original's intent?
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="research">
-        <h2>Research & Citations</h2>
-        <div class="prompt-grid">
-          <div class="prompt-card">
-            <div class="prompt-title">
-              <span>Finding Reliable References</span>
-              <button
-                class="copy-btn"
-                data-prompt="I am working on [insert your topic]. Please help me find reliable references that I can use for research. Requirements: • Sources must be credible and authoritative (e.g., peer-reviewed journals, academic books, government reports, or reputable organizations). • Provide full bibliographic details (author, title, publication, year, and link if available). • Summarize each reference in 2–3 sentences, highlighting its main argument, findings, or relevance to my topic. • Include a mix of recent publications (last 5–10 years) and foundational works if they exist. • Organize references by themes or subtopics (e.g., causes, effects, solutions). • Format output in a clear, structured way (e.g., numbered list or table)."
-                aria-label="Copy prompt for Finding Reliable References"
-              >
-                Copy
-              </button>
-            </div>
-            <p class="prompt-text">
-              I am working on [insert your topic]. Please help me find reliable
-              references that I can use for research.<br /><br />
-              <strong>Requirements:</strong><br />
-              - Sources must be credible and authoritative (e.g., peer-reviewed
-              journals, academic books, government reports, or reputable
-              organizations).<br />
-              - Provide full bibliographic details (author, title, publication,
-              year, and link if available).<br />
-              - Summarize each reference in 2–3 sentences, highlighting its main
-              argument, findings, or relevance to my topic.<br />
-              - Include a mix of recent publications (last 5–10 years) and
-              foundational works if they exist.<br />
-              - Organize references by themes or subtopics (e.g., causes,
-              effects, solutions).<br />
-              - Format output in a clear, structured way (e.g., numbered list or
-              table).
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" aria-label="Back to top">↑</button>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <p>© Prompt GPT - Your AI Study Companion</p>
-        <p>Empowering students with smart prompts for academic success</p>
       </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section id="writing">
+      <h2>Essay Writing & Academic Skills</h2>
+      <div class="prompt-grid">
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Essay Planning</span>
+            <button class="copy-btn"
+              data-prompt="I need to write an essay on this topic; could you help me brainstorm a strong thesis statement and outline the main arguments, providing supporting evidence from the provided text?"
+              aria-label="Copy prompt for Essay Planning">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            I need to write an essay on this topic; could you help me
+            brainstorm a strong thesis statement and outline the main
+            arguments, providing supporting evidence from the provided text?
+          </p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Complete Essay Outline</span>
+            <button class="copy-btn"
+              data-prompt="Create a complete essay outline on {TOPIC}. Include an engaging hook, strong thesis statement and a conclusion with a call to action."
+              aria-label="Copy prompt for Complete Essay Outline">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Create a complete essay outline on {TOPIC}. Include an engaging
+            hook, strong thesis statement and a conclusion with a call to
+            action.
+          </p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Essay Enhancement</span>
+            <button class="copy-btn"
+              data-prompt="Rewrite this draft essay to make it more persuasive and academic-sounding without changing the meaning: {ESSAY}"
+              aria-label="Copy prompt for Essay Enhancement">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Rewrite this draft essay to make it more persuasive and
+            academic-sounding without changing the meaning: {ESSAY}
+          </p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Formal Academic Writing</span>
+            <button class="copy-btn"
+              data-prompt="Write in a 300 words essay about {TOPIC} in a formal academic tone with transitions and citations {APA format}."
+              aria-label="Copy prompt for Formal Academic Writing">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Write in a 300 words essay about {TOPIC} in a formal academic tone
+            with transitions and citations {APA format}.
+          </p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Proofreading</span>
+            <button class="copy-btn"
+              data-prompt="Proofread and improve grammar, clarity and coherence of this essay without losing any of the original's intent? {ESSAY}"
+              aria-label="Copy prompt for Proofreading">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Proofread and improve grammar, clarity and coherence of this essay
+            without losing any of the original's intent? {ESSAY}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="math">
+      <h2>Problem Solving & Math Help</h2>
+      <div class="prompt-grid">
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Step-by-Step Solutions</span>
+            <button class="copy-btn"
+              data-prompt="I'm having trouble with this math problem; can you walk me through the step-by-step solution, explaining the reasoning behind each calculation and the formula used?"
+              aria-label="Copy prompt for Step-by-Step Solutions">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            I'm having trouble with this math problem; can you walk me through
+            the step-by-step solution, explaining the reasoning behind each
+            calculation and the formula used?
+          </p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Simplification</span>
+            <button class="copy-btn"
+              data-prompt="Can you rephrase this complex sentence or paragraph in simpler terms, making it more accessible and easier for me to grasp its core meaning without losing any of the original's intent?"
+              aria-label="Copy prompt for Simplification">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Can you rephrase this complex sentence or paragraph in simpler
+            terms, making it more accessible and easier for me to grasp its
+            core meaning without losing any of the original's intent?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rewriting">
+      <h2>Content Transformation</h2>
+      <div class="prompt-grid">
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Note Summarization</span>
+            <button class="copy-btn"
+              data-prompt="A comprehensive summary should capture the main ideas clearly while highlighting the most important details. It organizes key points in a way that makes them easy to understand and remember. Adding context helps explain why the information matters and how it connects to broader themes. Together, these elements create notes that are both informative and meaningful."
+              aria-label="Copy prompt for Note Summarization">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            A comprehensive summary should capture the main ideas clearly while highlighting the most important details.
+            It organizes key points in a way that makes them easy to understand and remember. Adding context helps
+            explain why the information matters and how it connects to broader themes. Together, these elements create
+            notes that are both informative and meaningful.
+          </p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Human-Like Rewriting</span>
+            <button class="copy-btn"
+              data-prompt="Rewrite the following text to match a specific human and natural tone. Use clear language. Use a conversational and slightly informal tone. Avoid predictable rhythmic patterns. Avoid robotic structure. Insert specific personal anecdotes or hypothetical examples to illustrate points. Use common idioms correctly. Avoid repetitive transition words. If a sentence sounds too perfect or formal, break it. Write as if you are explaining this to a friend over coffee. Readability should match a college student. Prioritize clarity over complex vocabulary. Remove any list that looks too structured. Integrate those points into narrative paragraphs instead. Ensure the text includes occasional subjective opinions or mild biases typical of a human writer."
+              aria-label="Copy prompt for Human-Like Rewriting">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Rewrite the following text to match a specific human and natural
+            tone. Use clear language. Use a conversational and slightly
+            informal tone. Avoid predictable rhythmic patterns. Avoid robotic
+            structure. Insert specific personal anecdotes or hypothetical
+            examples to illustrate points. Use common idioms correctly. Avoid
+            repetitive transition words. If a sentence sounds too perfect or
+            formal, break it. Write as if you are explaining this to a friend
+            over coffee. Readability should match a college student.
+            Prioritize clarity over complex vocabulary. Remove any list that
+            looks too structured. Integrate those points into narrative
+            paragraphs instead. Ensure the text includes occasional subjective
+            opinions or mild biases typical of a human writer.
+          </p>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Concise Rewriting</span>
+            <button class="copy-btn"
+              data-prompt="Can you rewrite this in 100 words, without losing any of the original's intent?"
+              aria-label="Copy prompt for Concise Rewriting">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            Can you rewrite this in 100 words, without losing any of the
+            original's intent?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research & Citations</h2>
+      <div class="prompt-grid">
+        <div class="prompt-card">
+          <div class="prompt-title">
+            <span>Finding Reliable References</span>
+            <button class="copy-btn"
+              data-prompt="I am working on [insert your topic]. Please help me find reliable references that I can use for research. Requirements: • Sources must be credible and authoritative (e.g., peer-reviewed journals, academic books, government reports, or reputable organizations). • Provide full bibliographic details (author, title, publication, year, and link if available). • Summarize each reference in 2–3 sentences, highlighting its main argument, findings, or relevance to my topic. • Include a mix of recent publications (last 5–10 years) and foundational works if they exist. • Organize references by themes or subtopics (e.g., causes, effects, solutions). • Format output in a clear, structured way (e.g., numbered list or table)."
+              aria-label="Copy prompt for Finding Reliable References">
+              Copy
+            </button>
+          </div>
+          <p class="prompt-text">
+            I am working on [insert your topic]. Please help me find reliable
+            references that I can use for research.<br /><br />
+            <strong>Requirements:</strong><br />
+            - Sources must be credible and authoritative (e.g., peer-reviewed
+            journals, academic books, government reports, or reputable
+            organizations).<br />
+            - Provide full bibliographic details (author, title, publication,
+            year, and link if available).<br />
+            - Summarize each reference in 2–3 sentences, highlighting its main
+            argument, findings, or relevance to my topic.<br />
+            - Include a mix of recent publications (last 5–10 years) and
+            foundational works if they exist.<br />
+            - Organize references by themes or subtopics (e.g., causes,
+            effects, solutions).<br />
+            - Format output in a clear, structured way (e.g., numbered list or
+            table).
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© Prompt GPT - Your AI Study Companion</p>
+      <p>Empowering students with smart prompts for academic success</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
