@@ -1,0 +1,39 @@
+{
+  "contract": "The Prompt Library uses a neo-brutalist visual system: warm paper in light mode, ink-black surfaces in dark mode, thick outlines, hard offset shadows, and yellow, cyan, pink, and violet accents. Desktop uses a category rail and prompt grid; narrow screens use a compact category picker and one-column cards. Target viewports are 1440x900 and 390x844.",
+  "targetViewports": ["1440x900", "390x844"],
+  "accessibility": {
+    "status": "untested",
+    "evidence": "Source includes a skip link, labeled search, keyboard-operable category controls, visible focus styles, and reduced-motion rules. Rendered keyboard and contrast review was unavailable because the computer-use browser inventory was empty."
+  },
+  "responsive": {
+    "status": "untested",
+    "evidence": "Source defines desktop, tablet, and phone layouts at 1399px, 1020px, and 680px. Rendered viewport and long-text fit checks were unavailable because the computer-use browser inventory was empty."
+  },
+  "contentStates": {
+    "loading": {
+      "status": "not-applicable",
+      "reason": "Prompts come from a local TypeScript data file, so the page has no loading request."
+    },
+    "empty": {
+      "status": "untested",
+      "evidence": "A no-results state and clear-search action are implemented but could not be rendered or exercised."
+    },
+    "error": {
+      "status": "untested",
+      "evidence": "Clipboard failures show a retry state but could not be exercised in a browser."
+    },
+    "partial": {
+      "status": "not-applicable",
+      "reason": "The prompt collection is bundled locally and cannot partially load from a service."
+    },
+    "success": {
+      "status": "untested",
+      "evidence": "Copy success feedback is implemented but could not be exercised in a browser."
+    },
+    "permission": {
+      "status": "not-applicable",
+      "reason": "The app has no permission flow; clipboard access occurs only when a user selects Copy."
+    }
+  },
+  "renderedEvidence": []
+}
