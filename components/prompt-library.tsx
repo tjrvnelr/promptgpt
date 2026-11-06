@@ -69,6 +69,15 @@ export function PromptLibrary() {
     window.localStorage.setItem("prompt-library-theme", nextTheme);
   }
 
+  let resultsLabel: string;
+  if (search.trim()) {
+    resultsLabel = `${filteredPrompts.length} ${filteredPrompts.length === 1 ? "result" : "results"} for "${search.trim()}"`;
+  } else if (activeCategory === "all") {
+    resultsLabel = `${prompts.length} prompts to explore`;
+  } else {
+    resultsLabel = `${filteredPrompts.length} prompts in ${activeCategoryName}`;
+  }
+
   return (
     <div className="app-root">
       <a className="skip-link" href="#main-content">Skip to prompts</a>
