@@ -34,7 +34,6 @@ export function PromptLibrary() {
 
   const categoryCounts = useMemo(() => {
     const counts = Object.fromEntries([
-      ["all", prompts.length],
       ...categories.map((category) => [category.id, 0]),
     ]) as CategoryCounts;
     for (const prompt of prompts) counts[prompt.category] += 1;
@@ -72,8 +71,6 @@ export function PromptLibrary() {
   let resultsLabel: string;
   if (search.trim()) {
     resultsLabel = `${filteredPrompts.length} ${filteredPrompts.length === 1 ? "result" : "results"} for "${search.trim()}"`;
-  } else if (activeCategory === "all") {
-    resultsLabel = `${prompts.length} prompts to explore`;
   } else {
     resultsLabel = `${filteredPrompts.length} prompts in ${activeCategoryName}`;
   }
