@@ -75,11 +75,6 @@ export function CategoryNavigation({
           );
         })}
       </div>
-
-      <div className="sidebar-tip">
-        <span className="tip-mark" aria-hidden="true">✳</span>
-        <p>A clear ask is a good start. Add your own context to make it yours.</p>
-      </div>
     </nav>
   );
 }

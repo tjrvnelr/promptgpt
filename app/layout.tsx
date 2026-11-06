@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Prompt Library — thoughtful prompts, ready to use",
   description:
     "Browse a practical library of copy-ready AI prompts for school, work, research, writing, and everyday tasks.",
+  icons: {
+    icon: "/Neon_AI_Chip_Icon.png",
+  },
 };
 
 export default function RootLayout({

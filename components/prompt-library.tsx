@@ -34,6 +34,7 @@ export function PromptLibrary() {
 
   const categoryCounts = useMemo(() => {
     const counts = Object.fromEntries([
+      ["all", prompts.length],
       ...categories.map((category) => [category.id, 0]),
     ]) as CategoryCounts;
     for (const prompt of prompts) counts[prompt.category] += 1;
@@ -58,21 +59,14 @@ export function PromptLibrary() {
   }, [activeCategory, search]);
 
   const activeCategoryName = activeCategory === "all"
-    ? "All prompts"
-    : categories.find((category) => category.id === activeCategory)?.name ?? "All prompts";
+    ? ""
+    : categories.find((category) => category.id === activeCategory)?.name ?? "";
 
   function toggleTheme() {
     const nextTheme: Theme = theme === "light" ? "dark" : "light";
     setTheme(nextTheme);
     document.documentElement.dataset.theme = nextTheme;
     window.localStorage.setItem("prompt-library-theme", nextTheme);
-  }
-
-  let resultsLabel: string;
-  if (search.trim()) {
-    resultsLabel = `${filteredPrompts.length} ${filteredPrompts.length === 1 ? "result" : "results"} for "${search.trim()}"`;
-  } else {
-    resultsLabel = `${filteredPrompts.length} prompts in ${activeCategoryName}`;
   }
 
   return (
@@ -126,11 +120,12 @@ export function PromptLibrary() {
           </div>
 
           <div className="results-toolbar">
-            <p aria-live="polite" className="results-summary">{resultsLabel}</p>
-            <span className="active-filter">
-              <span className="filter-dot" aria-hidden="true" />
-              {activeCategoryName}
-            </span>
+            {activeCategoryName && (
+              <span className="active-filter">
+                <span className="filter-dot" aria-hidden="true" />
+                {activeCategoryName}
+              </span>
+            )}
           </div>
 
           {filteredPrompts.length > 0 ? (
