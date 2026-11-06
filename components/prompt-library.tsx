@@ -69,15 +69,6 @@ export function PromptLibrary() {
     window.localStorage.setItem("prompt-library-theme", nextTheme);
   }
 
-  let resultsLabel: string;
-  if (search.trim()) {
-    resultsLabel = `${filteredPrompts.length} ${filteredPrompts.length === 1 ? "result" : "results"} for "${search.trim()}"`;
-  } else if (activeCategory === "all") {
-    resultsLabel = `${prompts.length} prompts to explore`;
-  } else {
-    resultsLabel = `${filteredPrompts.length} prompts in ${activeCategoryName}`;
-  }
-
   return (
     <div className="app-root">
       <a className="skip-link" href="#main-content">Skip to prompts</a>
@@ -116,9 +107,7 @@ export function PromptLibrary() {
 
         <main className="library-main" id="main-content">
           <div className="page-heading">
-            <p className="eyebrow"><span aria-hidden="true">✳</span> {prompts.length} copy-ready prompts / {categories.length} categories</p>
             <h1>Find a prompt.<br /><span className="heading-highlight">Get things moving.</span></h1>
-            <p className="page-description">Practical starting points for school, work, research, writing, and everyday tasks.</p>
           </div>
 
           <div className="mobile-category-nav">
@@ -150,13 +139,9 @@ export function PromptLibrary() {
               <Button onClick={() => setSearch("")} type="button" variant="outline">Clear search</Button>
             </section>
           )}
-
-          <footer className="library-footer">
-            <p><span aria-hidden="true">✳</span> Made for your next good idea.</p>
-            <span>{prompts.length} prompts <i aria-hidden="true">·</i> {categories.length} categories</span>
-          </footer>
         </main>
       </div>
     </div>
   );
 }
+  
